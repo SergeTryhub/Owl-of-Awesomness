@@ -25,3 +25,4 @@ while s.recv(2) != 'ok':
  print ("waiting...")
  
 #s.close()
+#LOOK AT ME!!!!!!
