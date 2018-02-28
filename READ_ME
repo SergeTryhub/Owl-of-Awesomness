@@ -1,0 +1,19 @@
+Repository - C++ code to run the OWL in QT
+
+OWL-Centre - python, centeres the owl..
+
+OWLPython + .2 - code to check the camera feed
+
+PFCSocket - Raspberry file for connection with computer
+
+calibrate.py - bifocal calibration of the cameras
+
+facedetect.py - face detection
+
+plane_tracker.py - sect a plane in one window(camera feed) and the other tracks it
+
+servo_cntr.py - default setup and controll of the servos + picture taking for calibration
+
+sobel.py - sobel filter
+
+the other files are for calibration in QT
