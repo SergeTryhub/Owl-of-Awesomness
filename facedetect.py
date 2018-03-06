@@ -17,17 +17,15 @@ import cv2
 TCP_IP = '10.0.0.10'
 TCP_PORT = 22
 BUFFER_SIZE = 1024
-#MESSAGE = "Hello, World!"
 
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 s.connect((TCP_IP, TCP_PORT))
-#s.send(MESSAGE)
 data = s.recv(BUFFER_SIZE)
 s.close()
 #---------------------------
 # local modules
-from video import create_capture
 from common import clock, draw_str
+from video import create_capture
 
 
 def detect(img, cascade):
