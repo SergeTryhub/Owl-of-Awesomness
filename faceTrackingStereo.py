@@ -61,13 +61,15 @@ def write_ply(fn, verts, colors):
         np.savetxt(f, verts, fmt='%f %f %f %d %d %d ')
 
 if __name__ == '__main__':
-    cap = cv2.VideoCapture('http://10.0.0.10:8080/stream/video.mjpeg')
+    #cap = cv2.VideoCapture('http://10.0.0.10:8080/stream/video.mjpeg')
+    cap = cv2.VideoCapture('C:/Users/Student/Desktop/Owl.mp4')
+
     time.sleep(1)
     
     cv2.namedWindow('Disparity')
     #cv2.createTrackbar('min disp', 'Disparity', 16, 30, nothing)
     #cv2.createTrackbar('max disp', 'Disparity', 128, 150, nothing)
-    cv2.createTrackbar('blocksize', 'Disparity', 1, 30, nothing)
+    cv2.createTrackbar('blocksize', 'Disparity', 5, 30, nothing)
     cv2.createTrackbar('speckle range', 'Disparity', 16, 60, nothing)
     cv2.createTrackbar('window size', 'Disparity', 3, 16, nothing)
     cv2.createTrackbar('num disp', 'Disparity', 1, 32, nothing)
