@@ -52,6 +52,7 @@ def disp_map_color():
 		mode=cv2.STEREO_SGBM_MODE_SGBM_3WAY
 		)
 	stereoR = cv2.ximgproc.createRightMatcher(stereoL)
+	stereo = stereoL
 	lmbda = 80000
 	sigma = 1.2
 	visual_multiplier = 1.0
@@ -69,7 +70,7 @@ def disp_map_color():
 	filteredImg = cv2.normalize(src=filteredImg, dst=filteredImg, beta=0, alpha=255, norm_type=cv2.NORM_MINMAX);
 	filteredImg = np.uint8(filteredImg)
 	
-	#disp = stereo.compute(unDistR, unDistL).astype(np.float32) / 16
+	disp = stereo.compute(unDistR, unDistL).astype(np.float32) / 16
 	#disp1 = stereo.compute(imgR, imgL).astype(np.float32) / 16
     
 
@@ -151,7 +152,7 @@ if __name__ == '__main__':
 		disp_map_color()
 
 		#cv2.imshow('Disparity undistorted', (disp-min_disp)/num_disp) #Colour
-		#cv2.imshow('Disparity', (disp-min_disp)/num_disp) #Colour
+		cv2.imshow('Disparity no filter', (disp-min_disp)/num_disp) #Colour
 		cv2.imshow('Disparity', filteredImg)
 		cv2.imshow('Tools', img)
 	   
