@@ -17,3 +17,7 @@ servo_cntr.py - default setup and controll of the servos + picture taking for ca
 sobel.py - sobel filter
 
 the other files are for calibration in QT
+
+face_follow - does what it says on the tin
+
+object_follow - much like the previous one
